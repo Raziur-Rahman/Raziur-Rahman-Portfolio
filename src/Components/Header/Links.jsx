@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Links = ({ setOpen }) => {
 
-    const variants ={
+    const variants = {
         open: {
             transition: {
                 staggerChildren: 0.1,
@@ -15,7 +15,7 @@ const Links = ({ setOpen }) => {
             }
         },
     }
-    const variantsI ={
+    const variantsI = {
         open: {
             delay: 2,
             y: 0,
@@ -28,22 +28,22 @@ const Links = ({ setOpen }) => {
     }
 
     const link = [
-        "Home", "About", "Projects", "Contact", 
+        "Home", "About Me", "My Skills", "Projects", "Contact",
     ]
 
     return (
-        <motion.div variants={variants}  className='absolute w-[100%] h-[100%] flex flex-col justify-center items-center gap-5'>
+        <motion.div variants={variants} className='absolute w-[100%] h-[100%] flex flex-col justify-center items-center gap-5 z-[999]'>
             {
-                link.map(item => <motion.a 
-                    variants={variantsI} 
-                    onClick={()=>setOpen((prev)=> !prev)} 
-                    href={`#${item}`} key={item} 
-                    className="text-4xl"
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: .90}}
-                    >{item}</motion.a>)
+                link.map(item => <motion.a
+                    variants={variantsI}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: .90 }}
+                    onClick={() => setOpen((prev) => !prev)}
+                    href={`#${item}`} key={item}
+                    className="text-4xl z-[999]"
+                >{item}</motion.a>)
             }
-            
+
         </motion.div>
     );
 };
