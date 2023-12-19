@@ -41,14 +41,14 @@ const Banner = () => {
                 initial="initial"
                 animate="animate"
                 className="flex flex-col gap-5 p-5 md:w-[50%] justify-center mt-10 md:mt-28 ">
-                <motion.h2 variants={variants} className="text-3xl text-amber-500 tracking-widest font-semibold">Hi, I'm Raziur Rahman</motion.h2>
+                <motion.h2 variants={variants} className="text-3xl text-amber-500 tracking-widest font-semibold">{`Hi, I'm Raziur Rahman`}</motion.h2>
                 <motion.h1 variants={variants} className="text-5xl font-bold">MERN Stack Web Developer </motion.h1>
                 <motion.div variants={variants} className="space-x-5 my-10">
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: .90 }}
                         variants={variants}
-                        className="btn btn-outline">DownLoad Resume</motion.button>
+                        className="btn btn-outline"><a href="Raziur's Resume.pdf" download target="blank">Download Resume</a></motion.button>
                     <motion.button
                         variants={variants}
                         whileHover={{ scale: 1.1 }}
